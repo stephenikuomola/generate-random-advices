@@ -1,0 +1,14 @@
+{
+  "name": "advice-generator-app-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Advice generator app coding challenge](./design/desktop-preview.jpg)",
+  "type": "module",
+  "source": "index.html",
+  "browserslist": "> 0.3%, last 2 versions, Firefox ESR, not dead",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "keywords": ["HTML", "CSS", "JS", "Prettier", "ESLint", "Parcel"],
+  "author": "Stephen Ikuomola",
+  "license": "ISC"
+}
