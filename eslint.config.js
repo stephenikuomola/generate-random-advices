@@ -33,6 +33,9 @@ export default [
   {
     files: ['**/*.css'],
     language: 'css/css',
+    plugins: {
+      css,
+    },
     languageOptions: {
       customSyntax: {
         atrules: {
