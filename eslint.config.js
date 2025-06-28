@@ -1,18 +1,17 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import eslintConfigPrettier from "eslint-config-prettier/flat";
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import css from '@eslint/css';
+import pluginJs from '@eslint/js';
+import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import jsdoc from 'eslint-plugin-jsdoc';
-import perfectionist from 'eslint-plugin-perfectionist';
-import packageJson from "eslint-plugin-package-json/configs/recommended";
 import eslintPluginJsonc from 'eslint-plugin-jsonc';
+import packageJson from 'eslint-plugin-package-json/configs/recommended';
+import perfectionist from 'eslint-plugin-perfectionist';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import globals from 'globals';
 import jsoncParser from 'jsonc-eslint-parser';
-import css from "@eslint/css";
-
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  {languageOptions: { globals: globals.browser }},
+  { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
   eslintPluginPrettierRecommended,
   eslintConfigPrettier,
@@ -29,34 +28,33 @@ export default [
       parser: jsoncParser
     }
   },
-
   {
     files: ['**/*.css'],
     language: 'css/css',
-    plugins: {
-      css,
-    },
     languageOptions: {
       customSyntax: {
         atrules: {
           'custom-media': {
-            prelude: '<media-query-list>',
+            prelude: '<media-query-list>'
           }
         }
       }
     },
+    plugins: {
+      css
+    },
     rules: {
-      'css/no-empty-blocks': ['error'],
-      'css/no-invalid-properties': ['error'],
       'css/no-duplicate-imports': ['error'],
+      'css/no-empty-blocks': ['error'],
+      'css/no-invalid-properties': ['error']
     }
   },
   {
     files: ['**/*.js', '**/*.css'],
     plugins: {
-      jsdoc, 
+      jsdoc
     },
-    rules : {
+    rules: {
       'constructor-super': ['error'],
       'default-case': ['error'],
       'default-case-last': ['error'],
@@ -73,6 +71,7 @@ export default [
       'jsdoc/no-multi-asterisks': ['warn'], // Recommended
       'jsdoc/no-undefined-types': ['warn'], // Recommended
       'jsdoc/require-asterisk-prefix': ['warn'],
+      'jsdoc/require-description': ['warn'],
       'jsdoc/require-jsdoc': ['error'], // Recommended
       'jsdoc/require-param': ['error'], // Recommended
       'jsdoc/require-param-description': ['warn'], // Recommended
@@ -95,16 +94,15 @@ export default [
       'no-dupe-class-members': ['error'],
       'no-dupe-keys': ['error'],
       'no-ex-assign': ['error'],
+      'no-magic-numbers': ['error'],
+      'no-self-compare': ['error'],
       'no-sparse-arrays': ['error'],
       'no-this-before-super': ['error'],
       'no-unreachable': ['error'],
       'no-useless-assignment': ['error'],
       'no-var': ['error'],
-      'no-magic-numbers': ['error'],
-      'no-self-compare': ['error'],
       quotes: ['error', 'single', { allowTemplateLiterals: true }],
-      semi: ['error'],
-      'jsdoc/require-description': ['warn']
+      semi: ['error']
     }
   }
 ];
