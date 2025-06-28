@@ -113,7 +113,7 @@ The introduction section with drop-down navigation should be responsive across a
 
 ```css
 /* https://utopia.fyi/type/calculator?c=320,9.39,2.18,1440,13,2.15,1,0,&s=0.75%7C0.5%7C0.25,1.5%7C2%7C3%7C4%7C6,s-l&g=s,l,xl,12 */
---ff-epilogue-sans-serif: var(--ff-manrope), sans-serif;
+--ff-manrope-sans-serif: var(--ff-manrope), sans-serif;
 --ff-manrope: 'Manrope';
 --font-style: normal;
 --font-size-fluid-4: clamp(0.5869rem, 0.5224rem + 0.3223vw, 0.8125rem);
@@ -140,8 +140,7 @@ html {
   text-size-adjust: none;
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
-  /* Please set the font-size on the body to be 28px */
-  font-size: 1.75rem;
+  font-family: var(--ff-manrope-sans-serif);
 }
 
 /* Set core root defaults */
@@ -202,7 +201,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* Please set the font-size on the body to be 28px */
-  font-size: 1.75rem;
+  font-size: 28px;
   overflow: hidden;
 }
 
