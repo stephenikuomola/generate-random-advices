@@ -38,5 +38,18 @@
     "jsonc-eslint-parser": "^2.4.0",
     "parcel": "^2.13.0",
     "prettier": "3.5.3"
+  },
+  "@parcel/transformer-css": {
+    "drafts": {
+      "nesting": true,
+      "customMedia": true
+    },
+    "pseudoClasses": {
+      "focusVisible": "focus-visible",
+      "focusWithin": "focus-within",
+      "hover": "hover",
+      "focus": "active",
+      "active": "active"
+    }
   }
 }
