@@ -64,7 +64,7 @@ The introduction section with drop-down navigation should be responsive across a
 --radius-7: 6px;
 --radius-8: 8px;
 --radius-9: 10px;
---radius-10: 12px; 
+--radius-10: 12px;
 --radius-11: 15px;
 --radius-12: 20px;
 --radius-13: 24px;
@@ -80,18 +80,35 @@ The introduction section with drop-down navigation should be responsive across a
 ## Favicon Links
 
 ```html
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
-<link rel="manifest" href="/assets/favicons/site.webmanifest">
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="/assets/favicons/apple-touch-icon.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="/assets/favicons/favicon-32x32.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href="/assets/favicons/favicon-16x16.png"
+/>
+<link rel="manifest" href="/assets/favicons/site.webmanifest" />
 ```
 
 ## Typography
 
 ```html
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+  rel="stylesheet"
+/>
 ```
 
 ```css
@@ -99,58 +116,81 @@ The introduction section with drop-down navigation should be responsive across a
 --ff-epilogue-sans-serif: var(--ff-manrope), sans-serif;
 --ff-manrope: 'Manrope';
 --font-style: normal;
---font-size-fluid-4:clamp(0.5869rem, 0.5224rem + 0.3223vw, 0.8125rem);
---font-size-fluid-5:clamp(1.2794rem, 1.1458rem + 0.6678vw, 1.7469rem);
+--font-size-fluid-4: clamp(0.5869rem, 0.5224rem + 0.3223vw, 0.8125rem);
+--font-size-fluid-5: clamp(1.2794rem, 1.1458rem + 0.6678vw, 1.7469rem);
 ```
 
 ## Resets
 
 ```css
 * {
-	margin: 0; 
-	padding: 0; 
+  margin: 0;
+  padding: 0;
 }
 
-*, *::before, *::after {
-	box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html {
-	overflow: hidden;
-	/* The style below prevents font-style inflation */
-	text-size-adjust: none;
-	-moz-text-size-adjust: none;
-	-webkit-text-size-adjust: none;
-	/* Please set the font-size on the body to be 28px */
-	font-size: 1.75rem;
- }
- 
+  overflow: hidden;
+  /* The style below prevents font-style inflation */
+  text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  /* Please set the font-size on the body to be 28px */
+  font-size: 1.75rem;
+}
+
 /* Set core root defaults */
-html:focus-within { 
-	scroll-behavior: smooth; 
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
 /* Avoid text overflow */
-p, h1, h2, h3, h4, h5, h6 {
-	 overflow: break-word;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow: break-word;
 }
- 
+
 /* Balance text wrappings on the heading */
-h1, h2, h3, h4, h5, h6 {
-	text-wrap: balance; 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
 }
 
 /* Improve line wrapping */
 p {
-	text-wrap: pretty; 
+  text-wrap: pretty;
 }
- 
- h1, h2, h3, h4, button, input, label {
-	 line-height: 1.1;
- }
- 
- /* Improve media defaults */
- img,picture, video, canvas, svg {
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
   max-width: 100%;
   height: auto;
   display: var(--block);
@@ -162,9 +202,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* Please set the font-size on the body to be 28px */
-	font-size: 1.75rem;
-	overflow: hidden;
-	}
+  font-size: 1.75rem;
+  overflow: hidden;
+}
 
 /* We make sure that the text areas without rows are not tiny */
 textarea:not([rows]) {
@@ -172,8 +212,11 @@ textarea:not([rows]) {
 }
 
 /* Inherits fonts for input and buttons */
-input, button, textarea, select { 
-	font: inherit; 
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 /* Remove the text-decoration style for all anchor elements */
@@ -212,13 +255,13 @@ a:not([class]) {
 /* Remove the mark of the list items */
 li {
   list-style-type: none;
-  color: inherit; 
+  color: inherit;
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
   *,
   *::before,

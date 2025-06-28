@@ -2,13 +2,6 @@
   "name": "advice-generator-app-main",
   "version": "1.0.0",
   "description": "![Design preview for the Advice generator app coding challenge](./design/desktop-preview.jpg)",
-  "type": "module",
-  "source": "index.html",
-  "browserslist": "> 0.3%, last 2 versions, Firefox ESR, not dead",
-  "scripts": {
-    "lint": "npx eslint src/*.js",
-    "start": "parcel index.html"
-  },
   "keywords": [
     "HTML",
     "CSS",
@@ -17,8 +10,24 @@
     "ESLint",
     "Parcel"
   ],
-  "author": "Stephen Ikuomola",
   "license": "ISC",
+  "author": "Stephen Ikuomola",
+  "type": "module",
+  "source": "index.html",
+  "scripts": {
+    "lint": "npx eslint src/*.js",
+    "lint:eslint": " npx eslint --fix .",
+    "lint:prettier": "prettier --write .",
+    "start": "parcel index.html"
+  },
+  "browserslist": "> 0.3%, last 2 versions, Firefox ESR, not dead",
+  "dependencies": {
+    "eslint-plugin-jsdoc": "^50.6.3",
+    "eslint-plugin-jsonc": "^2.19.1",
+    "eslint-plugin-perfectionist": "^4.9.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "open-props": "^1.7.13"
+  },
   "devDependencies": {
     "@eslint/css": "^0.4.0",
     "@eslint/js": "^9.21.0",
@@ -29,12 +38,5 @@
     "jsonc-eslint-parser": "^2.4.0",
     "parcel": "^2.13.0",
     "prettier": "3.5.3"
-  },
-  "dependencies": {
-    "eslint-plugin-jsdoc": "^50.6.3",
-    "eslint-plugin-jsonc": "^2.19.1",
-    "eslint-plugin-perfectionist": "^4.9.0",
-    "eslint-plugin-prettier": "^5.2.3",
-    "open-props": "^1.7.13"
   }
 }
