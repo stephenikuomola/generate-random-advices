@@ -825,7 +825,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     element?.classList.remove('hidden'); // Show the canvas
     try {
         const response = await fetch('https://api.adviceslip.com/advice');
-        if (!response.ok) throw new Error(`HTTP error: ${response}`);
+        if (!response.ok) throw new Error(`HTTP error: ${response.status} ${response.statusText}`);
         const data = await response.json();
         const advice = data.slip.advice;
         const adviceId = data.slip.id;
