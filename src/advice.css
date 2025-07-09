@@ -163,7 +163,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* Please set the font-size on the body to be 28px */
-  font-size: 1.75rem; /* 28px */
+  font-size: var(--font-size-fluid-5);
   overflow: hidden;
   background-color: var(--dark-blue);
   display: var(--flex);
