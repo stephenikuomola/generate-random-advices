@@ -31,21 +31,21 @@ export default [
   {
     files: ['**/*.css'],
     language: 'css/css',
-    languageOptions: {
-      customSyntax: {
-        atrules: {
-          'custom-media': {
-            prelude: '<media-query-list>'
-          }
-        }
-      }
-    },
+    //   customSyntax: {
+    //     atrules: {
+    //       'custom-media': {
+    //         prelude: '<custom-media-query>'
+    //       }
+    //     }
+    //   }
+    // },
     plugins: {
       css
     },
     rules: {
       'css/no-duplicate-imports': ['error'],
       'css/no-empty-blocks': ['error'],
+      'css/no-invalid-at-rules': ['error'],
       'css/no-invalid-properties': ['error']
     }
   },
