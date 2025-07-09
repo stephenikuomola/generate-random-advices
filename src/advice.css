@@ -118,7 +118,7 @@ h3,
 h4,
 h5,
 h6 {
-  overflow: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Balance text wrappings on the heading */
@@ -163,17 +163,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* Please set the font-size on the body to be 28px */
-  font-size: 28px;
+  font-size: 1.75rem; /* 28px */
   overflow: hidden;
   background-color: var(--dark-blue);
   display: var(--flex);
   align-items: center;
   container: body / inline-size;
-}
-
-/* We make sure that the text areas without rows are not tiny */
-textarea:not([rows]) {
-  min-height: 10em;
 }
 
 /* Inherits fonts for input and buttons */
@@ -182,6 +177,11 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+/* We make sure that the text areas without rows are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
 }
 
 /* Remove the text-decoration style for all anchor elements */
