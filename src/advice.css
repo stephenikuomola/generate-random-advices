@@ -179,6 +179,16 @@ select {
   font: inherit;
 }
 
+/* All buttons should have this style */
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
 /* We make sure that the text areas without rows are not tiny */
 textarea:not([rows]) {
   min-height: 10em;
@@ -194,16 +204,6 @@ a {
 a:focus,
 button:focus {
   outline: none;
-}
-
-/* All buttons should have this style */
-button {
-  appearance: none;
-  background: none;
-  border: none;
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
 }
 
 /* A elements that don't have a class get default styles */
