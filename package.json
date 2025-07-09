@@ -31,6 +31,8 @@
   "devDependencies": {
     "@eslint/css": "^0.4.0",
     "@eslint/js": "^9.21.0",
+    "@parcel/packager-raw-url": "^2.13.0",
+    "@parcel/transformer-webmanifest": "^2.13.0",
     "eslint": "^9.21.0",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-package-json": "^0.26.2",
@@ -40,16 +42,14 @@
     "prettier": "3.5.3"
   },
   "@parcel/transformer-css": {
+    "pseudoClasses": {
+      "focusWithin": "focus-within",
+      "focus": "focus",
+      "active": "active"
+    },
     "drafts": {
       "nesting": true,
       "customMedia": true
-    },
-    "pseudoClasses": {
-      "focusVisible": "focus-visible",
-      "focusWithin": "focus-within",
-      "hover": "hover",
-      "focus": "active",
-      "active": "active"
     }
   }
 }
