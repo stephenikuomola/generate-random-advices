@@ -15,6 +15,7 @@
   "type": "module",
   "source": "index.html",
   "scripts": {
+    "build": "parcel build index.html --dist-dir ./dist",
     "lint": "npx eslint src/*.js",
     "lint:eslint": " npx eslint --fix .",
     "lint:prettier": "prettier --write .",
