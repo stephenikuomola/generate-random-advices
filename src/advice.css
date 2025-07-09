@@ -1,9 +1,25 @@
+/* The Props */
+@import "npm:open-props/open-props.min.css";
+
+/* The Prop Borders */
+@import "npm:open-props/borders.min.css";
+
+/* The Prop Sizes */
+@import "npm:open-props/sizes.min.css";
+
+/* The Prop Fonts */
+@import "npm:open-props/fonts.min.css";
+
+/* The Prop Easing */
+@import "npm:open-props/easings.min.css";
+
 :root {
   /* Colors */
   --light-cyan: hsl(193, 38%, 86%);
   --neon-green: hsl(150, 100%, 66%);
   --grayish-blue: hsl(217, 19%, 38%);
   --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(219, 22%, 16%);
 
   /* Display */
   --hidden: none;
@@ -149,6 +165,10 @@ body {
   /* Please set the font-size on the body to be 28px */
   font-size: 28px;
   overflow: hidden;
+  background-color: var(--dark-blue);
+  display: var(--flex);
+  align-items: center;
+  container: body / inline-size;
 }
 
 /* We make sure that the text areas without rows are not tiny */
@@ -216,4 +236,88 @@ li {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+main {
+  inline-size: min(92%, 33.75rem);
+  background-color: var(--dark-grayish-blue);
+  border-radius: var(--radius-3);
+  margin-inline: auto;
+  padding-inline: var(--size-8);
+  text-align: center;
+  padding-block-start: var(--size-8);
+  padding-block-end: 4.5rem; /* Ensures the button is not too close to the text */
+  position: relative;
+  @container body (max-width: 500px) {
+    & {
+      padding-inline: var(--size-5);
+      padding-block-start: var(--size-7);
+      padding-block-end: 4rem;
+    }
+  }
+}
+
+div {
+  display: var(--flex);
+  flex-direction: column;
+  gap: var(--size-5);
+}
+
+h1 {
+  font-style: var(--font-style);
+  font-weight: var(--font-weight-8);
+  line-height: var(--font-lineheight-00);
+  color: var(--neon-green);
+  font-size: var(--font-size-fluid-4);
+  text-transform: uppercase;
+  letter-spacing: var(--font-letterspacing-5);
+}
+
+div[class~="advice-container"] > p {
+  font-style: var(--font-style);
+  font-weight: var(--font-weight-8);
+  font-size: var(--font-size-fluid-5);
+  line-height: var(--font-lineheight-2);
+  letter-spacing: var(--font-letterspacing-1);
+  color: var(--light-cyan);
+  min-height: 8.25rem; /* Ensures the text area is not too small */
+}
+
+picture img {
+  margin-inline: auto;
+}
+
+.btn {
+  background-color: var(--neon-green);
+  padding: var(--size-4);
+  border-radius: var(--radius-round);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  transition: box-shadow 0.4s var(--ease-elastic-in-3);
+}
+
+.btn:disabled {
+  background-color: var(--grayish-blue);
+  opacity: 0.6;
+}
+
+@custom-media --mouse (hover) and (pointer: fine);
+
+@media (--mouse) {
+  .btn:is(:hover, :focus-visible) {
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 40px 0px var(--neon-green);
+  }
+
+  .btn:disabled:is(:hover, :focus-visible) {
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}
+
+.canvas.hidden {
+  display: var(--hidden);
 }
