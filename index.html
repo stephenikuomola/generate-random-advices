@@ -79,12 +79,46 @@
     />
 
     <!-- CSS Links -->
-    <link rel="stylesheet" href="./src/generate.css" />
+    <link rel="stylesheet" href="./src/advice.css" />
+
+    <!-- 3D animation using Zdog -->
+    <script src="https://unpkg.com/zdog@1/dist/zdog.dist.min.js"></script>
 
     <!-- JavaScript Links -->
-    <script type="module" src="./src/generate.js"></script>
+    <script type="module" src="./src/advice.js"></script>
 
     <title>Advice generator app</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <div>
+        <canvas class="canvas hidden" width="800" height="150"></canvas>
+        <div class="advice-container"></div>
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="/assets/images/pattern-divider-desktop.svg"
+            width="444"
+            height="16"
+          />
+          <img
+            alt=""
+            aria-hidden="true"
+            width="295"
+            height="16"
+            src="/assets/images/pattern-divider-mobile.svg"
+          />
+        </picture>
+        <button class="btn" aria-label="Click to generate new advice" disabled>
+          <img
+            alt=""
+            aria-hidden="true"
+            width="24"
+            height="24"
+            src="/assets/images/icon-dice.svg"
+          />
+        </button>
+      </div>
+    </main>
+  </body>
 </html>
